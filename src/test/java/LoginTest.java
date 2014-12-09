@@ -74,7 +74,7 @@ public class LoginTest {
     }
 
 
-    //New COMMENT! OOPSSS! changed line
+    //New COMMENT! Merged Line
     @After
     public void tearDown() throws Exception {
         driver.quit();
