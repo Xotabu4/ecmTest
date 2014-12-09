@@ -57,3 +57,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+#Idea work files
+.idea/
+
+#Java target folder
+target/
