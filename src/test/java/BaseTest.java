@@ -16,8 +16,8 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         System.out.println("BEFORE CLASS IS EXECUTED");
 
-        System.out.println(System.getProperty("use.Browser"));
-        //mvn clean test -Duse.Browser=firefox
+        System.out.println(System.getProperty("useBrowser"));
+        //mvn clean test -DuseBrowser=firefox
     }
 
     @AfterClass

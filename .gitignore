@@ -60,6 +60,7 @@ $RECYCLE.BIN/
 
 #Idea work files
 .idea/
+*.iml
 
 #Java target folder
 target/
