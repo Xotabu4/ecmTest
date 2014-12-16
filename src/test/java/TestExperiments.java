@@ -3,9 +3,6 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-/**
- * Created by user on 01.12.2014.
- */
 public class TestExperiments {
 
     @Test
@@ -33,6 +30,7 @@ public class TestExperiments {
     public void testExperiment4() {
 
         Object a = new Object();
+        //noinspection UnnecessaryLocalVariable
         Object b = a;
 
         Object c = new Object();
