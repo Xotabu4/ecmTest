@@ -13,9 +13,10 @@ public class DataBaseTest {
     public void testAdminName() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connect = DriverManager
-                .getConnection("jdbc:mysql://localhost/ecm?"
-                        + "user=root" +
-                        "&password=");
+                .getConnection("jdbc:mysql://sql5.freesqldatabase.com/sql561932?"
+                        + "user=sql561932" +
+                        "&password=bZ5%25sK2%2A");
+        //password encoded. Decoded password is - bZ5%sK2*
 
 
         Statement statement = connect.createStatement();
