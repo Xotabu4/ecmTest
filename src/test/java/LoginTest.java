@@ -1,6 +1,5 @@
-import org.junit.Ignore;
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 
 import static org.junit.Assert.assertEquals;
@@ -29,8 +28,7 @@ public class LoginTest extends BaseTest {
     }
 
     //author - VLAD. Test failed due to bug.
-    @Test
-    @Ignore
+    @Test(enabled = false)
     public void testNoPassword() throws Exception {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("demo-dev@example.com", "");

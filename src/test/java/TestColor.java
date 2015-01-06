@@ -1,5 +1,5 @@
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 
 import static org.junit.Assert.assertEquals;

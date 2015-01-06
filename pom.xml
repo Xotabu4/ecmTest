@@ -30,6 +30,14 @@
             <version>5.1.6</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>LATEST</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <reporting>
@@ -38,7 +46,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>LATEST</version>
-                <!--> mvn site -DskipTests <-->
+                <!--> mvn site -DskipTests  - will generate report in target site<-->
             </plugin>
         </plugins>
     </reporting>

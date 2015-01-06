@@ -2,19 +2,24 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by user on 01.12.2014.
- */
 public class LoginPage {
+
+    @FindBy(id = "password")
+    private WebElement passwordField;
+
+    @FindBy(id = "emailid")
+    private WebElement emailField;
 
     private WebDriver driver;
 
     public LoginPage (WebDriver driver) {
-
-       this.driver = driver;
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
-
 
     public void login(String email, String password) {
         typeEmail(email);
@@ -27,16 +32,16 @@ public class LoginPage {
     }
 
     private void typePassword(String password) {
-        type(password, "password");
+        type(passwordField, password);
     }
 
     private void typeEmail(String email) {
-        type(email, "emailid");
+        type(emailField, email);
     }
 
-    private void type(String value, String idLocator) {
-        driver.findElement(By.id(idLocator)).clear();
-        driver.findElement(By.id(idLocator)).sendKeys(value);
+    private void type(WebElement element, String value) {
+        element.clear();
+        element.sendKeys(value);
     }
 
 

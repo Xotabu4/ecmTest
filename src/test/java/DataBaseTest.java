@@ -1,5 +1,4 @@
-import org.junit.Ignore;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,8 +7,7 @@ import java.sql.Statement;
 
 public class DataBaseTest {
 
-    @Test
-    @Ignore
+    @Test(enabled = false)
     public void testAdminName() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connect = DriverManager

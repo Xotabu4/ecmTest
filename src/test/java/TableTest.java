@@ -1,6 +1,6 @@
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 
 import java.util.List;
