@@ -4,9 +4,3 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 script: mvn -q test
-notifications:
-  email:
-    - sotek37@gmail.com
-    - xotabu4@gmail.com
-    - kate.ruzhitskaya@gmail.com
-    - eftyyyy@gmail.com
