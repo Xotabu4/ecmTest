@@ -6,7 +6,7 @@ import static org.junit.Assert.assertSame;
 
 
 public class TestUserProfile extends BaseTest {
-    @Test
+    @Test(enabled=false)
     public void userProfileTest(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("demo-pm@example.com", "demo-pm");
