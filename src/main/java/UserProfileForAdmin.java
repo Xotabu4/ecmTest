@@ -11,7 +11,7 @@ public class UserProfileForAdmin {
     @FindBy(css = ".dropdown-toggle")
     private WebElement userDropdownToggle;
 
-    @FindBy(css = ".dropdown-menu.dropdown-user>li>a")
+    @FindBy(css = "[href*=profile]")
     private WebElement userProfile;
 
 
@@ -20,16 +20,13 @@ public class UserProfileForAdmin {
         this.driver = driver;
     }
 
-    public void open() {
-        this.driver.get("http://devck-cms.sourceforge.net/ecm/");
-    }
-
-    public void clickOnProfileDrop() {
-        driver.findElement(By.cssSelector(".dropdown-toggle"));
+    private void clickOnProfileDrop() {
+        userDropdownToggle.click();
     }
 
     public void clickOnUserProfile() {
-        driver.findElement(By.cssSelector(".dropdown-menu.dropdown-user>li>a"));
+        clickOnProfileDrop();
+        userProfile.click();
     }
 
 }
