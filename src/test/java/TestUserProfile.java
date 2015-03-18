@@ -10,7 +10,7 @@ public class TestUserProfile extends BaseTest {
         loginPage.login("demo-pm@example.com", "demo-pm");
         UserProfileForAdmin userProfileForAdmin = new UserProfileForAdmin(driver);
         userProfileForAdmin.clickOnUserProfile();
-        assertSame(driver.getCurrentUrl(),
+        assertEquals(driver.getCurrentUrl(),
                 "http://devck-cms.sourceforge.net/ecm/users/user/profile");
     }
 
