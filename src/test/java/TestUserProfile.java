@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertEquals;
 
 
 public class TestUserProfile extends BaseTest {
