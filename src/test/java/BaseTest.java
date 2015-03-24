@@ -5,12 +5,18 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.util.logging.Logger;
+
 public class BaseTest {
+    private static Logger LOGGER = Logger.getLogger(BaseTest.class.getName());
+
+
     protected static WebDriver driver = null;
 
     @BeforeSuite
     public static void beforeAll() throws Exception {
         driver = WebDriverHelper.get();
+        LOGGER.info("WEbDriver created ");
     }
 
     @AfterSuite

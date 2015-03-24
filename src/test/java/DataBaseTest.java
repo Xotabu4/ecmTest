@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.logging.Logger;
 
 public class DataBaseTest {
+    private static Logger LOGGER = Logger.getLogger(DataBaseTest.class.getName());
 
     @Test(enabled = false)
     public void testAdminName() throws Exception {
@@ -25,7 +27,7 @@ public class DataBaseTest {
 
             String name = rs.getString("description");
             int createdate = rs.getInt("creationtime");
-            System.out.println(name + " " + createdate);
+            LOGGER.info(name + " " + createdate);
         }
 
     }

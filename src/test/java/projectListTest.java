@@ -8,6 +8,7 @@ import pageObjects.LoginPage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.assertNotEquals;
 
@@ -15,6 +16,8 @@ import static org.junit.Assert.assertNotEquals;
  * Created by reflecti0n on 06.12.2014.
  */
 public class projectListTest {
+    private static Logger LOGGER = Logger.getLogger(projectListTest.class.getName());
+
     private WebDriver driver;
 
     @Before
@@ -39,7 +42,7 @@ public class projectListTest {
 
         for (WebElement element : list) {
 
-            System.out.println(element.getText());
+            LOGGER.info(element.getText());
 
             assertNotEquals("", element.getText());
 
